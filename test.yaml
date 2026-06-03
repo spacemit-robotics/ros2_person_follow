@@ -1,0 +1,17 @@
+module: middleware/ros2/perception/person_follow
+
+tests:
+  - name: person_follow-pytest
+    description: >-
+      Verifies person_follow helper logic, image queue handling and detector
+      post-processing behavior using synthetic image data without requiring
+      live hardware.
+    category: functional
+    scopes: [pr]
+    timeout_s: 120
+    workdir: sdk
+    artifacts:
+      - output/test/pr/middleware__ros2__perception__person_follow/modules/middleware__ros2__perception__person_follow/logs/person_follow_pytest.log
+    command: |
+      mkdir -p output/test/pr/middleware__ros2__perception__person_follow/modules/middleware__ros2__perception__person_follow/logs
+      python -m pytest -q middleware/ros2/perception/person_follow/tests | tee output/test/pr/middleware__ros2__perception__person_follow/modules/middleware__ros2__perception__person_follow/logs/person_follow_pytest.log
