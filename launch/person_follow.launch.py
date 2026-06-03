@@ -37,9 +37,9 @@ def generate_launch_description():
             description='timeout in seconds before stopping when target is lost'),
 
         Node(
-            package='jobot_mono_follow',
-            executable='agv_follow_node_old',
-            name='agv_follow_node_old',
+            package='person_follow',
+            executable='person_follow_node',
+            name='person_follow_node',
             output='screen',
             parameters=[
                 {'publish_result_img': LaunchConfiguration('publish_result_img')},

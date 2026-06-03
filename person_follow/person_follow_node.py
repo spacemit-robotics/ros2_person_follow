@@ -226,7 +226,7 @@ def main():
     # 目标检测线程
     result_queue = queue.Queue(maxsize=2)
     model_path = os.path.expanduser('~/.brdk_models/jobot_mono_follow/yolov8n.q.onnx')
-    label_path = os.path.join(package_share_directory, 'jobot_mono_follow_cv/data/label.txt')
+    label_path = os.path.join(package_share_directory, 'person_follow_cv/data/label.txt')
 
     # 获取参数
     publish_result_img = follow_control.publish_result_img
